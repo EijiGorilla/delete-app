@@ -1,0 +1,1 @@
+import{ib as a}from"./index-C5z1JKvU.js";const s=()=>a((c,n)=>{const e=new Set;return n.onDisconnected(()=>{e.forEach(r=>r.cancel())}),{add:r=>{[r].flat().forEach(o=>e.add(o))},resources:e}});export{s as u};
