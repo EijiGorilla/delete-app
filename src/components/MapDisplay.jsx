@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../index.css";
 
-import "@arcgis/map-components/dist/components/arcgis-scene";
+import "@arcgis/map-components/components/arcgis-scene";
 import "@arcgis/map-components/components/arcgis-elevation-profile";
 
 // 2 D <-> 3D
@@ -22,6 +22,7 @@ export default function MapDisplay() {
       }}
     >
       <arcgis-elevation-profile
+        referenceElement="arcgis-scene-id"
         slot="bottom-right"
         unit="millimeters"
       ></arcgis-elevation-profile>
