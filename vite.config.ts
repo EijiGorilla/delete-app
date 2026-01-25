@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     copy({
       targets: [
-        { src: "node_modules/@arcgis/core/assets", dest: "delete-app" }, //"dest: 'dist'"
+        { src: "node_modules/@arcgis/core/assets", dest: "dist" }, //"dest: 'dist'"
       ],
       hook: "writeBundle",
     }),
