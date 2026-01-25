@@ -13,7 +13,7 @@ export default defineConfig(({ command }) => {
   if (command === "build") {
     return {
       plugins: [react()],
-      base: "/delete-app/", // Use this path for production builds
+      base: "./delete-app/", // Use this path for production builds
       // ...
     };
   }
