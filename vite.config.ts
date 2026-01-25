@@ -1,15 +1,19 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { comlink } from "vite-plugin-comlink";
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
-  plugins: [react(), comlink()],
+  plugins: [
+    copy({
+      targets: [{ src: "node_modules/@arcgis/core/assets", dest: "public" }],
+      hook: "writeBundle",
+    }),
+    react(),
+  ],
   server: {
     open: true,
   },
-  build: {
-    outDir: "dist",
-  },
+
   optimizeDeps: {
     include: ["@arcgis/map-components"],
   },
