@@ -1,0 +1,1 @@
+import{l as o,p as l,n as c,A as r}from"./index-Bmx7tfaW.js";const d={validationContainer:"validation-container"},p=()=>{},$=({scale:i,status:n,id:t,icon:e,message:s,ref:a})=>c`<div class=${o(d.validationContainer)} ${l(a||p)}><calcite-input-message aria-live=polite .icon=${e} id=${t??r} .scale=${i} .status=${n}>${s}</calcite-input-message></div>`;export{$ as V};
