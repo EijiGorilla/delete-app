@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: "dist",
   },
   optimizeDeps: {
-    include: ["@arcgis/map-components"],
+    include: ["@arcgis/map-components", "@arcgis/core"],
   },
   base: "/delete-app/",
 });
