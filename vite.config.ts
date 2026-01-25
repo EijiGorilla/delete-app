@@ -1,31 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import { comlink } from "vite-plugin-comlink";
 
-// export default defineConfig({
-//   plugins: [react()],
-//   server: {
-//     open: true,
-//   },
-//   base: "/delete-app/",
-// });
-
-export default defineConfig(({ command }) => {
-  if (command === "build") {
-    return {
-      plugins: [react()],
-      base: "/delete-app/", // Use this path for production builds
-      build: {
-        outDir: "dist",
-      },
-      server: {
-        open: true,
-      },
-      // ...
-    };
-  }
-  return {
-    plugins: [react()],
-    base: "/", // Use default path for development server
-    // ...
-  };
+export default defineConfig({
+  plugins: [react(), comlink()],
+  server: {
+    open: true,
+  },
+  build: {
+    outDir: "dist",
+  },
+  base: "/delete-app/",
 });
