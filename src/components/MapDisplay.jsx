@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../index.css";
+import "@arcgis/core/assets/esri/themes/dark/main.css";
 
 import "@arcgis/map-components/components/arcgis-scene";
 import "@arcgis/map-components/components/arcgis-elevation-profile";
